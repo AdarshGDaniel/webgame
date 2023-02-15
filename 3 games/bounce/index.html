@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Bounce</title>
+    <link rel="stylesheet" href="design/style.css" />
+    <script type="module" src="source/Main.js"></script>
+</head>
+
+<body>
+    <div id="container" class="mainScreen">
+        <div class="count">0</div>
+        <div class="bricks"></div>
+        <div class="board">
+            <div class="ball"></div>
+            <div class="ship"></div>
+            <div class="tail"></div>
+        </div>
+
+        <div class="messages">
+            <div class="bg"></div>
+            <div class="text">
+                <h2>Bounce</h2>
+                <p>Score 30 to get the clue</p>
+            </div>
+
+            <div class="main">
+                <!-- <ul>
+                    <li><a href="#" data-action="play" data-mode="speed">Sp<u>e</u>ed</a></li>
+                    <li><a href="#" data-action="play" data-mode="random"><u>R</u>andom</a></li>
+                    <li><a href="#" data-action="play" data-mode="bricks">Bric<u>k</u>s</a></li>
+                    <li><a href="#" data-action="highScores">H<u>i</u>gh Scores</a></li>
+                    <li><a href="#" data-action="help"><u>H</u>elp</a></li>
+                </ul> -->
+                <ul class="main_menu">
+                    <li><a href="#" data-action="play" data-mode="random"><u>P</u>lay</a></li>
+                </ul>
+                <div class="audio" data-action="sound">
+                    <div class="waves">
+                        <div></div><div></div>
+                        <div></div><div></div>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+
+            <ul class="pause">
+                <li><a href="#" data-action="endPause"><u>C</u>ontinue</a></li>
+                <li><a href="#" data-action="finishGame"><u>N</u>ew Game</a></li>
+            </ul>
+
+            <div class="input">
+                <input type="text" placeholder="Name" /> &nbsp;
+                <a href="#" data-action="save"><u>O</u>k</a>
+                <a class="restart" href="#" data-action="mainScreen"><u>N</u>ew Game</a>
+            </div>
+
+            <div class="high">
+                <div class="scores"></div>
+                <div class="none">No scores available</div>
+                <div class="links">
+                    <ul>
+                        <!-- <li><a href="#" data-action="showScores" data-mode="speed">Sp<u>e</u>ed</a></li> -->
+                        <li><a href="#" data-action="showScores" data-mode="random"><u>P</u>lay</a></li>
+                        <!-- <li><a href="#" data-action="showScores" data-mode="bricks">Bric<u>k</u>s</a></li> -->
+                        <li><a href="#" data-action="mainScreen"><u>B</u>ack</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="controls">
+                <ol>
+                    <li>Use the mouse or left and right arrows to move the ship.</li>
+                    <li>Click, Enter or Space will make the ball start moving.</li>
+                    <li>Click or P will pause the game.</li>
+                    <li>M will trigger the sound on and off.</li>
+                    <li>Use the links or keys (underline letters) to navigate through the screens.</li>
+                </ol>
+                <a href="#" data-action="mainScreen"><u>B</u>ack</a>
+            </div>
+        </div>
+        <div class="buttonsp">
+            <Button id="txtbox1" onclick="leftfun()">←</Button>
+            <Button id="txtbox2" onclick="rightfun()">→</Button>
+        </div>
+    </div>
+    <script>
+        var txtbox1 = document.getElementById('txtbox1');
+        var txtbox2 = document.getElementById('txtbox2');
+
+
+        function leftfun(){
+            setTimeout(
+                function ll() {
+    
+                    var ev = new KeyboardEvent('keydown', {altKey:false,
+                        bubbles: true,
+                        cancelBubble: false, 
+                        cancelable: true,
+                        charCode: 0,
+                        code: "Down",
+                        composed: true,
+                        ctrlKey: false,
+                        currentTarget: null,
+                        defaultPrevented: true,
+                        detail: 0,
+                        eventPhase: 0,
+                        isComposing: false,
+                        isTrusted: true,
+                        key: "Down",
+                        keyCode: 37,
+                        location: 0,
+                        metaKey: false,
+                        repeat: false,
+                        returnValue: false,
+                        shiftKey: false,
+                        type: "keydown",
+                        which: 37});
+                    
+                    txtbox2.dispatchEvent(ev);
+                }
+                ,1
+            )
+            setTimeout(
+                function rr() {
+    
+                    var ev = new KeyboardEvent('keyup', {altKey:false,
+                        bubbles: true,
+                        cancelBubble: false, 
+                        cancelable: true,
+                        charCode: 0,
+                        code: "Up",
+                        composed: true,
+                        ctrlKey: false,
+                        currentTarget: null,
+                        defaultPrevented: true,
+                        detail: 0,
+                        eventPhase: 0,
+                        isComposing: false,
+                        isTrusted: true,
+                        key: "Up",
+                        keyCode: 37,
+                        location: 0,
+                        metaKey: false,
+                        repeat: false,
+                        returnValue: false,
+                        shiftKey: false,
+                        type: "keyup",
+                        which: 37});
+                    
+                    txtbox2.dispatchEvent(ev);
+                }
+                ,1
+            )
+        }
+        function rightfun(){
+            setTimeout(
+                function rr() {
+    
+                    var ev = new KeyboardEvent('keydown', {altKey:false,
+                        bubbles: true,
+                        cancelBubble: false, 
+                        cancelable: true,
+                        charCode: 0,
+                        code: "Down",
+                        composed: true,
+                        ctrlKey: false,
+                        currentTarget: null,
+                        defaultPrevented: true,
+                        detail: 0,
+                        eventPhase: 0,
+                        isComposing: false,
+                        isTrusted: true,
+                        key: "Down",
+                        keyCode: 39,
+                        location: 0,
+                        metaKey: false,
+                        repeat: false,
+                        returnValue: false,
+                        shiftKey: false,
+                        type: "keydown",
+                        which: 39});
+                    
+                    txtbox2.dispatchEvent(ev);
+                }
+                ,1
+            )
+            setTimeout(
+                function rr() {
+    
+                    var ev = new KeyboardEvent('keyup', {altKey:false,
+                        bubbles: true,
+                        cancelBubble: false, 
+                        cancelable: true,
+                        charCode: 0,
+                        code: "Up",
+                        composed: true,
+                        ctrlKey: false,
+                        currentTarget: null,
+                        defaultPrevented: true,
+                        detail: 0,
+                        eventPhase: 0,
+                        isComposing: false,
+                        isTrusted: true,
+                        key: "Up",
+                        keyCode: 39,
+                        location: 0,
+                        metaKey: false,
+                        repeat: false,
+                        returnValue: false,
+                        shiftKey: false,
+                        type: "keyup",
+                        which: 39});
+                    
+                    txtbox2.dispatchEvent(ev);
+                }
+                ,1
+            )
+        }
+        
+        
+           
+    </script>
+</body>
+</html>
