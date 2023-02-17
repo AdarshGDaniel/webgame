@@ -25,7 +25,7 @@
   fill: rgb(0, 255, 162) !important;
 }
 #phone:hover path{ 
-  fill: rgb(153, 0, 255) !important;
+  fill: rgb(72, 0, 255) !important;
 }
 #servers:hover path{ 
   fill: rgb(255, 0, 183) !important;
@@ -62,18 +62,28 @@
 }
 .x{
   width: 100%;
+  height: 100% !important;
   height: auto;
   display: grid;
   place-items: center;
 }
-.x button{
+.x h1, span{
+  color: white;
+  font-size: 2em;
+}
+#btncls{
+  transform: translate(1300%, 0px);
   background-color: transparent;
   color: white;
   border: none;
   font-size: larger;
 }
-.x button:hover{
+#btncls:hover{
   color: black;
+}
+#title-mod{
+  color: white;
+  text-align: center !important;
 }
 .mod{
   position: absolute;
@@ -88,27 +98,32 @@
   z-index: +1;
   background-color: rgba(255, 0, 0, 0.674);
   box-shadow: 0px 0px 61px 3px rgba(255, 0, 0, 0.56);
-  width: 90vh;
+  width: 100%;
   height: 80vh;
   justify-content: space-evenly;
 }
-
+.cont iframe{
+  width: 100vh;
+  height: 50vh;
+  border: none;
+}
 .btn-fin{
-  background-color: rgba(255, 255, 255, 0.623) !important;
-  color: black !important;
+  background-color: rgba(0, 0, 0, 0.623) !important;
+  color: rgb(255, 255, 255) !important;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   border: none;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
+  box-shadow: 0px 0px 61px 3px rgba(0, 0, 0, 0.56);
 }
 .btn-fin:hover{
-  background-color: rgba(210, 210, 210, 0.453) !important;
+  background-color: rgba(40, 40, 40, 0.453) !important;
   transform: scale(1.1,1.1) !important;
   transition: all ease-in-out 0.3s;
 }
 .btn-fin:active{
-  background-color: rgba(185, 185, 185, 0.401) !important;
+  background-color: rgba(85, 85, 85, 0.401) !important;
   transition: all ease-in-out 0.3s;
   transform: scale(1,1) !important;
 }
@@ -121,10 +136,17 @@
   justify-content: space-evenly;
 }
 .checkbox img{
-  width: 100px !important;
-  height: 100px !important;
+  width: 80px !important;
+  height: 80px !important;
 }   
+.checkbox-out li{
+  display: grid;
+  place-content: center;
+  padding: 20px;
+}
 .checkbox-out label{
+  border: 1px solid rgba(255, 255, 255, 0.731) !important;
+  border-style: dotted !important;
   padding: 10px;
   display: block;
   width: 100px !important;
@@ -132,6 +154,10 @@
   border: 2px solid transparent;
   border-radius: 5px;
   justify-content: space-evenly;
+}
+.checkbox-out label:hover{
+  background-color: aliceblue !important;
+  cursor: pointer;
 }
 .checkbox-out input{
   display: none;
@@ -142,4 +168,11 @@
 .checkbox-out input[type=checkbox]:checked + label{
   border: 2px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.633);
+}
+
+.keys-among{
+  color: white;
+}
+.keys-among input{
+  width: 20px;
 }

@@ -13,8 +13,6 @@ var deskPuzzleSolved = false; // ✅
 var phonePuzzleSolved = false; // ✅
 var cpuPuzzleSolved = false; // ✅
 var serverPuzzleSolved = false; // ✅
-var ampPuzzleSolved = false; // ✅
-var bookPuzzleSolved = false; // ✅
 var fishPuzzleSolved = false; // ✅
 var PlantPuzzleSolved = false; // ✅
 
@@ -374,7 +372,7 @@ var ansID = ["6", "8", "1", "2", "7", "4", "3", "5"];
 var droppedID = [0, 0, 0, 0, 0, 0, 0, 0];
 var dragThis = 0;
 var dropThis = 0;
-$(document).ready(function() {
+$(document).ready(function myfun() {
   $(".tile").each(function() {
     $(this).draggable({
       drag: function(event, ui) {
@@ -2047,20 +2045,56 @@ function verify() {
   // var mirrorPuzzleSolved = true; // ✅
   // var pipePuzzleSolved = true; // ✅
   // var recursionPuzzleSolved = true; // ✅
+//   var deskPuzzleSolved = false; // ✅
+// var phonePuzzleSolved = false; // ✅
+// var cpuPuzzleSolved = false; // ✅
+// var serverPuzzleSolved = false; // ✅
+// var fishPuzzleSolved = false; // ✅
+// var PlantPuzzleSolved = false; // ✅
 
-  if (
-    puzzlerSolved == true &&
-    mathPuzzleSolved == true &&
-    flexboxPuzzleSolved == true &&
-    mirrorPuzzleSolved == true &&
-    pipePuzzleSolved == true &&
-    recursionPuzzleSolved == true
-  ) {
-    //ESCAPE
+function desksolve(){
+  deskPuzzleSolved = true;
+}
+function phonesolve(){
+  phonePuzzleSolved = true;
+}
+function serversolve(){
+  serverPuzzleSolved = true;
+}
+function cpusolve(){
+  cpuPuzzleSolved = true;
+}
+function fishsolve(){
+  fishPuzzleSolved = true;
+}
+function plantsolve(){
+  PlantPuzzleSolved = true;
+}
 
-    escapeNow();
-  }
+
+
+    if (
+      
+      puzzlerSolved == true &&
+      mathPuzzleSolved == true &&
+      flexboxPuzzleSolved == true &&
+      mirrorPuzzleSolved == true &&
+      pipePuzzleSolved == true &&
+      recursionPuzzleSolved == true &&
+      deskPuzzleSolved == true &&
+      phonePuzzleSolved == true &&
+      cpuPuzzleSolved == true &&
+      serverPuzzleSolved == true &&
+      pipePuzzleSolved == true &&
+      fishPuzzleSolved == true
+    ) {
+      //ESCAPE
+
+      escapeNow();
+    }
 }
 verify();
+
+setInterval(verify(), 1000);
 
 // End JS for verification

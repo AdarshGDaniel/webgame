@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.lock-body {
+  transform: translateY(-50px);
+  height: 50vh;
+  width: 50vh;
+  margin: 0;
+  font-family: Roboto Mono;
+  background-color: transparent;
+}
+
+.lock-body text {
+	user-select: none;
+}

@@ -20,6 +20,7 @@ Objects in the Room
 #open-door
 
 ******/
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 /* Start global colors */
 :root {
   --white: #e6e6e6;
@@ -57,7 +58,7 @@ body {
   justify-items: center;
   background-color: #051217;
   background-image: radial-gradient(circle, #071e26, #051217);
-  font-family: "Cutive Mono", monospace;
+  font-family: "Cutive Mono", monospace !important;
 }
 
 svg {
@@ -901,7 +902,7 @@ input[type=number] {
   color: var(--white);
   text-align: center;
   margin: 0;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", cursive !important;
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);

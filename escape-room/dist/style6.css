@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Bitter:400,700';
+.hangman * {
+  box-sizing: border-box;
+}
+
+.hangman-results .game-over button, .hangman-results .game-over, .hangman-letters div {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hangman{
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%3E%3Cg%20fill=%22#84c6ad%22%3E%3Cpolygon%20points=%2212%200%200%2012%200%2016%2016%200%22/%3E%3Cpolygon%20points=%2212%2016%2016%2016%2016%2012%22/%3E%3Cpolygon%20points=%220%204%200%208%208%200%204%200%22/%3E%3Cpolygon%20points=%2216%208%2016%204%204%2016%208%2016%22/%3E%3C/g%3E%3C/svg%3E");
+  background-color: transparent;
+  font-family: "Bitter", serif;
+  line-height: 1;
+  height: 59vh;
+}
+
+.hangman {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.hangman svg{
+  height: 200px;
+}
+.hangman-letters {
+  text-align: center;
+  margin: 30px auto;
+}
+.hangman-letters div {
+  background: white;
+  display: inline-block;
+  padding: 8px 16px 10px;
+  margin: 3px;
+  font-weight: bold;
+  font-size: 26px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+  border-radius: 3px;
+}
+.hangman-letters div:hover {
+  background: #ddd;
+}
+.hangman-letters .disabled {
+  color: #888;
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.hangman-letters .disabled:before {
+  content: "✖";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: normal;
+  font-size: 32px;
+  color: #992020;
+}
+.hangman-letters .disabled.correct {
+  background: #b3e5dc;
+}
+.hangman-letters .disabled.correct:before {
+  color: #298772;
+  content: "✔";
+}
+@media (max-width: 640px) {
+  .hangman-letters div {
+    padding: 6px 12px 8px;
+    font-size: 18px;
+  }
+  .hangman-letters .disabled:before {
+    font-size: 26px;
+  }
+}
+.hangman-puzzle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hangman-puzzle-letters {
+  display: inline-block;
+  padding: 8px 16px 10px;
+  margin: 4px;
+  border-bottom: 2px solid black;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  width: 30px;
+  flex: 1 auto;
+  padding-bottom: 3px;
+}
+.hangman-puzzle-letters.space {
+  border: 0;
+}
+.hangman-puzzle-letters.game-lost {
+  color: #277265;
+}
+@media (max-width: 640px) {
+  .hangman-puzzle-letters {
+    font-size: 24px;
+    width: 20px;
+    height: 36px;
+    padding: 6px 0 8px;
+  }
+}
+.hangman-results {
+  text-align: center;
+  position: relative;
+}
+.hangman-results .game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(179, 229, 220, 0.95);
+}
+.hangman-results .game-over p {
+  font-size: 32px;
+  font-weight: bold;
+}
+.hangman-results .game-over button {
+  background: #41bea8;
+  color: white;
+  padding: 20px 30px;
+  font-size: 32px;
+  font-family: "Bitter", serif;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.hangman-results .game-over button:hover {
+  background: #7ad2c2;
+}
+@media (max-width: 640px) {
+  .hangman-results .game-over {
+    padding: 30px;
+  }
+  .hangman-results .game-over p {
+    margin-top: 0;
+  }
+  .hangman-results .game-over button {
+    padding: 10px 20px;
+    font-size: 26px;
+  }
+}
+.hangman-hangman {
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .hangman-hangman {
+    padding: 0 50px;
+  }
+}
+.hangman-svg {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 640px) {
+  .hangman {
+    width: 95%;
+  }
+}
