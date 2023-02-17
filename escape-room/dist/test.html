@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 100%;
+    }
+    body{
+        background-color: blueviolet;
+    }
+    .checkbox-out{
+        display: flex;
+        flex-direction: row;
+    }
+    .checkbox img{
+        width: 100px !important;
+        height: 100px !important;
+    }   
+    .checkbox-out label{
+        padding: 10px;
+        display: block;
+        width: 100px !important;
+        height: 100px !important;
+        border: 2px solid transparent;
+        border-radius: 5px;
+    }
+    .checkbox-out input{
+        display: none;
+    }
+    .checkbox-out{
+        list-style: none;
+    }
+    .checkbox-out input[type=checkbox]:checked + label{
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.633);
+    }
+    
+    
+</style>
+<body>
+    <div>
+        <ul class="checkbox-out">
+            <li>
+              <input type="checkbox" id="myCheckbox1" />
+              <label class="checkbox" for="myCheckbox1"><img src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-shuffle-icon-png-image_4162945.jpg" /></label>
+            </li>
+            <li>
+          
+              <input type="checkbox" id="myCheckbox2" />
+              <label class="checkbox" for="myCheckbox2"><img src="https://www.iconpacks.net/icons/2/free-random-icon-3814-thumb.png" /></label>
+            </li>
+            <li>
+          
+              <input type="checkbox" id="myCheckbox3" />
+              <label class="checkbox" for="myCheckbox3"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+            </li>
+            <li>
+          
+                <input type="checkbox" id="myCheckbox4" />
+                <label class="checkbox" for="myCheckbox4"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+              <li>
+          
+                <input type="checkbox" id="myCheckbox5" />
+                <label class="checkbox" for="myCheckbox5"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+              <>
+        </ul>
+        <ul class="checkbox-out">
+                <input type="checkbox" id="myCheckbox6" />
+                <label class="checkbox" for="myCheckbox6"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+              <li>
+          
+                <input type="checkbox" id="myCheckbox7" />
+                <label class="checkbox" for="myCheckbox7"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+              <li>
+          
+                <input type="checkbox" id="myCheckbox8" />
+                <label class="checkbox" for="myCheckbox8"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+              <li>
+          
+                <input type="checkbox" id="myCheckbox9" />
+                <label class="checkbox" for="myCheckbox9"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+              <li>
+          
+                <input type="checkbox" id="myCheckbox10" />
+                <label class="checkbox" for="myCheckbox10"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>
+              </li>
+        </ul>
+        <Button onclick="checkboxcheck()" type="submit">Check</Button>
+    </div>
+    <script>
+        function checkboxcheck(){
+            for(var i = 0; i < 3; i++){
+                
+            }
+        }
+    </script>
+</body>
+</html>
